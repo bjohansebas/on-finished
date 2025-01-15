@@ -182,6 +182,7 @@ describe('onFinished(res, listener)', function () {
     it('should fire with error', function (done) {
       var server = http.createServer(function (req, res) {
         onFinished(res, function (err) {
+          console.log(err)
           assert.ok(err)
           server.close(done)
         })
